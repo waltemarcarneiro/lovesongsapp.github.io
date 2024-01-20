@@ -7,7 +7,7 @@
     "name": "Love Songs",
     "short_name": "Love Songs",
     "description": "The Best Love Songs",
-
+    
     "icons": [
         {
             "src": "icon-192x192.png",
@@ -30,5 +30,20 @@
             "type": "image/png"
         }
     ],
+
+    "screenshots": [
+        {
+            "src": "screenshot/screenshot-mobile.png",
+            "sizes": "360x640",
+            "type": "image/png"
+        }
+    ],
+    "screenshots_fullpage": [
+        {
+            "src": "screenshot/screenshot-desktop-wide.png",
+            "type": "image/png"
+        }
+    ],
+
     "display_override": ["window-controls-overlay"]
 }
