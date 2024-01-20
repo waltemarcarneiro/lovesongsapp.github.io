@@ -102,6 +102,24 @@ let allMusic = [
     img: "./covers/cover-16.jpg",
     src: "https://archive.org/download/a-love-so-beautiful_202401/A_Love_So_Beautiful.mp3"
   },
+  {
+    name: "I Will Always Love You",
+    artist: "Whitney Houston",
+    img: "./covers/cover-17.jpg",
+    src: "https://archive.org/download/i-will-always-love-you/I%20Will%20Always%20Love%20You.mp3"
+  },
+  {
+    name: "Alone",
+    artist: "Heart",
+    img: "./covers/cover-18.jpg",
+    src: "https://archive.org/download/alone_202401/Alone.mp3"
+  },
+  {
+    name: "Stuck On You",
+    artist: "Lionel Richie",
+    img: "./covers/cover-19.jpg",
+    src: "https://archive.org/download/stuck-on-you_202401/Stuck%20On%20You.mp3"
+  },
 
 ];
 
