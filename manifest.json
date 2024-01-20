@@ -7,6 +7,7 @@
     "name": "Love Songs",
     "short_name": "Love Songs",
     "description": "The Best Love Songs",
+
     "icons": [
         {
             "src": "icon-192x192.png",
@@ -27,6 +28,9 @@
             "src": "icon-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
+        }
+        {
+            "display_override": ["window-controls-overlay"]
         }
     ]
 }
