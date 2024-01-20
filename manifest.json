@@ -7,7 +7,7 @@
     "name": "Love Songs",
     "short_name": "Love Songs",
     "description": "The Best Love Songs",
-    
+    "form_factor": "wide",
     "icons": [
         {
             "src": "icon-192x192.png",
