@@ -1,0 +1,107 @@
+
+let allMusic = [
+  {
+    name: "The Lady In Red",
+    artist: "Chris De Burgh",
+    img: "./covers/cover-1.jpg",
+    src: "https://archive.org/download/chris-de-burgh-lady-in-red/Chris%20DeBurgh%20%20Lady%20In%20Red.mp3"
+  },
+  {
+    name: "Hazard",
+    artist: "Richard Marx",
+    img: "./covers/cover-2.jpg",
+    src: "https://archive.org/download/richard-marx-hazard/Richard-Marx-Hazard.mp3"
+  },
+  {
+    name: "Hero",
+    artist: "Mariah Carey",
+    img: "./covers/cover-3.jpg",
+    src: "https://archive.org/download/mariah-carey-hero_202308/Mariah-Carey-Hero.mp3"
+  },
+  {
+    name: "There’s Never a Forever Thing",
+    artist: "A-ha",
+    img: "./covers/cover-4.jpg",
+    src: "https://archive.org/download/a-ha-theres-never-a-forever-thing/A-HA-There's-Never-A-Forever-Thing.mp3"
+  },
+  {
+    name: "Amazing",
+    artist: "Aerosmith",
+    img: "./covers/cover-5.jpg",
+    src: "https://archive.org/download/a-ha-theres-never-a-forever-thing/AEROSMITH-Amazing.mp3"
+  },
+  {
+    name: "Ordinary World",
+    artist: "Duran Duran",
+    img: "./covers/cover-6.jpg",
+    src: "https://archive.org/download/duran-duran-ordinary-world_202309/Duran-Duran_Ordinary_World.mp3"
+  },
+  {
+    name: "Breathe",
+    artist: "Faith Hill",
+    img: "./covers/cover-7.jpg",
+    src: "https://archive.org/download/duran-duran-ordinary-world_202309/Faith-Hill_Breathe.mp3"
+  },
+  {
+    name: "Broken Wings",
+    artist: "Mr. Mister",
+    img: "./covers/cover-8.jpg",
+    src: "https://archive.org/download/mr-mister-broken-wings_202309/MrMister-Broken_Wings.mp3"
+  },
+  {
+    name: "Do You Remenber?",
+    artist: "Phil Collins",
+    img: "./covers/cover-9.jpg",
+    src: "https://archive.org/download/do-you-remember/Do%20You%20Remember.mp3"
+  },
+  {
+    name: "Jesus to a Child",
+    artist: "George Michael",
+    img: "./covers/cover-10.jpg",
+    src: "https://archive.org/download/jesus-to-a-child-96/Jesus%20to%20a%20Child96.mp3"
+  },
+  {
+    name: "Thought Id Died and Gone to Heaven",
+    artist: "Bryan Adams",
+    img: "./covers/cover-11.jpg",
+    src: "https://backingtrackbrasil.com/mp3download/bt/Bryan_Adams_-_Thought_Id_Died_and_Gone_to_Heaven-sv.mp3"
+  },
+  {
+    name: "I'Li",
+    artist: "Alan Jackson - Tradução (Josinaldo Moreira)",
+    img: "./covers/cover-12.jpg",
+    src: "https://65381g.ha.azioncdn.net/d/e/6/e/josinaldomoreira2016-alan-jackson-ill-try-traducao-voz-josinaldo-moreira-5fccc7d7.mp3"
+  },
+  {
+    name: "Love Hurts",
+    artist: "Nazareth - Tradução (Josinaldo Moreira)",
+    img: "./covers/cover-13.jpg",
+    src: "https://65381g.ha.azioncdn.net/b/9/0/c/josinaldomoreira2016-nazareth-love-hurts-traducao-voz-josinaldo-moreira-7cdd76ed.mp3"
+  },
+  {
+    name: "Lady",
+    artist: "Kenny Rogers",
+    img: "./covers/cover-14.jpg",
+    src: "https://highlifeng.com.ng/swahilisongs/wp-content/uploads/2023/06/Kenny_Rogers_-_Lady.mp3"
+  },
+  {
+    name: "Nazareth",
+    artist: "Where Are You Now",
+    img: "./covers/cover-15.jpg",
+    src: "https://archive.org/download/where-are-you-now-96k/Where_Are_You%20Now_96k.mp3"
+  },
+  {
+    name: "Right Here Waiting",
+    artist: "Richard Marx",
+    img: "./covers/cover-2.jpg",
+    src: "https://archive.org/download/right-here-waiting/Right_Here_Waiting.mp3"
+  },
+  {
+    name: "A Love So Beautiful",
+    artist: "Michael Bolton",
+    img: "./covers/cover-16.jpg",
+    src: "https://archive.org/download/a-love-so-beautiful_202401/A_Love_So_Beautiful.mp3"
+  },
+
+];
+
