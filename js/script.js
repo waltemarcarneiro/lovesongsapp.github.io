@@ -218,7 +218,7 @@ if (navigator.share) {
        navigator.share({
        title: document.title,
        text: 'Playlist com as mais belas músicas românticas internacionais.',
-       url: 'https://bit.ly/LoveSongsApp'
+       url: 'http://bit.ly/LoveSongsApp'
        }).then(() => {
        console.log('Página compartilhada com sucesso!');
        }).catch((error) => {
