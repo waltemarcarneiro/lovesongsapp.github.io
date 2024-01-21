@@ -36,12 +36,17 @@
             "src": "screenshot/screenshot-mobile.png",
             "sizes": "360x640",
             "type": "image/png"
+            "label": "Love Songs App"
+            
         }
     ],
     "screenshots_fullpage": [
         {
             "src": "screenshot/screenshot-desktop-wide.png",
+            "sizes": "640x360",
             "type": "image/png"
+            "form_factor": "wide",
+            "label": "Love Songs App"
         }
     ],
 
