@@ -1,53 +1,49 @@
 {
-   "theme_color":"#0C071A",
-   "background_color":"#ffffff",
-   "display":"fullscreen",
-   "scope":"/",
-   "start_url":"/",
-   "name":"Love Songs",
-   "short_name":"Love Songs",
-   "description":"The Best Love Songs",
-   "form_factor":"wide",
-   "icons":[
-      {
-         "src":"icons/icon192.png",
-         "sizes":"192x192",
-         "type":"image/png"
-      },
-      {
-         "src":"icons/icon256.png",
-         "sizes":"256x256",
-         "type":"image/png"
-      },
-      {
-         "src":"icons/icon384.png",
-         "sizes":"384x384",
-         "type":"image/png"
-      },
-      {
-         "src":"icons/icon512.png",
-         "sizes":"512x512",
-         "type":"image/png"
-      }
-   ],
-   "screenshots":[
-      {
-         "src":"screenshot/screenshot-mobile.png",
-         "sizes":"360x640",
-         "type":"image/png",
-         "label":"Love Songs App"
-      }
-   ],
-   "screenshots_fullpage":[
-      {
-         "src":"screenshot/screenshot-desktop-wide.png",
-         "sizes":"640x360",
-         "type":"image/png",
-         "form_factor":"wide",
-         "label":"Love Songs App"
-      }
-   ],
-   "display_override":[
-      "window-controls-overlay"
-   ]
+    "theme_color": "#0C071A",
+    "background_color": "#ffffff",
+    "display": "fullscreen",
+    "scope": "/",
+    "start_url": "/",
+    "name": "Love Songs",
+    "short_name": "Love Songs",
+    "description": "Descubra o amor nas melodias atemporais do nosso aplicativo de música romântica, onde as décadas de 80 e 90 se encontram. Deixe-se envolver por uma trilha sonora nostálgica que celebra o romance em cada nota. 💖🎶.",
+    "form_factor": "wide",
+    "icons": [
+        {
+            "src": "icons/icon192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+
+    "screenshots": [
+        {
+            "src": "screenshot/screenshot-mobile.png",
+            "sizes": "360x640",
+            "type": "image/png"
+        }
+    ],
+    "screenshots_fullpage": [
+        {
+            "src": "screenshot/screenshot-desktop-wide.png",
+            "type": "image/png"
+        }
+    ],
+
+    "display_override": ["window-controls-overlay"]
 }
