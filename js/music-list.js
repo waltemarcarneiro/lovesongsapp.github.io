@@ -16,7 +16,7 @@ let allMusic = [
     name: "Hero",
     artist: "Mariah Carey",
     img: "./covers/cover-3.jpg",
-    src: "https://archive.org/download/mariah-carey-hero_202308/Mariah-Carey-Hero.mp3"
+    src: "https://archive.org/download/mariah-carey-hero_202401/Mariah_Carey_Hero.mp3"
   },
   {
     name: "There’s Never a Forever Thing",
