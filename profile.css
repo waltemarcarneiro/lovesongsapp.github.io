@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+*{
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+    user-select: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    position: relative;
+}
+.icon {
+    cursor: pointer;
+
+}
+
+.profile {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    
+    background: linear-gradient(45deg, #00EF89, #703DFC, #416DD8);
+    background-size: 500% 200%;
+    animation: gradientAnimation 10s ease infinite;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.5s ease-in-out;
+    margin: 0 auto;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.profile.active {
+    left: 0;
+}
+
+.close-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: normal;
+}
+.name{
+    font-weight: 500;
+    font-size: 1.1em;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+.status{
+    font-size: 0.6em;
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+}
+.profile img {
+    margin-top: 10px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    border: 2px solid #fff;
+}

@@ -9,7 +9,9 @@
   <meta name="description" content="🎵 As mais românticas canções internacionais." />
   <meta name="theme-color" content="#0C071A" />
   <link rel="manifest" href="manifest.json" />
+  
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="profile.css">
   
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="https://kit.fontawesome.com/a7bac8094a.js" crossorigin="anonymous"></script>
@@ -44,7 +46,7 @@
   <div class="wrapper">
 
     <div class="top-bar">
-      <button id=""><i class="material-icons">menu</i></button>
+      <button onclick="toggleProfile()" id="backButton"><i class="material-icons">menu</i></button>
       <span class="title-player">Love Songs Player</span>
       
       <audio id="main-audio" src=""></audio>
@@ -119,7 +121,28 @@
 
   </div><!--end wrapper-->
 
+<!-- PROFILE -->
+    <div class="container">
+        
+        <div class="profile">
+            <div class="close-icon" onclick="toggleProfile()">
+                <i class="fas fa-times"></i>
+            </div>
+            <img src="foto.jpg" alt="Waltemar" width="100" height="100">
+            <p class="name">Waltemar Carneiro</p>
+            <div class="status">
+                <p>Web Developer</p>
+                <p>92 99362-3739</p>
+            </div>
+        </div>
+    </div>
 
+    <script>
+        function toggleProfile() {
+            document.querySelector('.profile').classList.toggle('active');
+        }
+    </script>
+    <!-- profile end -->
 
   <script src="js/music-list.js"></script>
   <script src="js/script.js"></script>
