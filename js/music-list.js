@@ -62,8 +62,8 @@ let allMusic = [
   },
   {
     name: "Thought Id Died and Gone to Heaven",
-    artist: "Love Songs Player",
-    img: "./covers/cover.jpg",
+    artist: "Bryan Adams",
+    img: "./covers/cover-11.jpg",
     src: "https://backingtrackbrasil.com/mp3download/bt/Bryan_Adams_-_Thought_Id_Died_and_Gone_to_Heaven-sv.mp3"
   },
   {
@@ -120,6 +120,16 @@ let allMusic = [
     img: "./covers/cover-19.jpg",
     src: "https://archive.org/download/stuck-on-you_202401/Stuck%20On%20You.mp3"
   },
-
+  {
+    name: "So Beautiful",
+    artist: "Chris De Burgh",
+    img: "./covers/cover-20.jpg",
+    src: "https://archive.org/download/so-beautiful/So_Beautiful.mp3"
+  },
+  {
+    name: "Heaven",
+    artist: "Bryan Adams",
+    img: "./covers/cover-11.jpg",
+    src: "https://archive.org/download/bryanadamspleaseforgiveme_201908/Bryan%20Adams%20-%20Heaven%20%28Official%20Music%20Video%29.mp3"
+  },
 ];
-
