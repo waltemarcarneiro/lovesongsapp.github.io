@@ -62,8 +62,8 @@ let allMusic = [
   },
   {
     name: "Thought Id Died and Gone to Heaven",
-    artist: "Bryan Adams",
-    img: "./covers/cover-11.jpg",
+    artist: "Love Songs player",
+    img: "./covers/cover.jpg",
     src: "https://backingtrackbrasil.com/mp3download/bt/Bryan_Adams_-_Thought_Id_Died_and_Gone_to_Heaven-sv.mp3"
   },
   {
