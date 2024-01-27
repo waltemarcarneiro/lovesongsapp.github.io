@@ -129,7 +129,7 @@ let allMusic = [
   {
     name: "Heaven",
     artist: "Bryan Adams",
-    img: "./covers/cover-11.jpg",
+    img: "./covers/bryan-adams.jpg",
     src: "https://archive.org/download/bryanadamspleaseforgiveme_201908/Bryan%20Adams%20-%20Heaven%20%28Official%20Music%20Video%29.mp3"
   },
 ];
