@@ -62,7 +62,8 @@ a {
 
 .lembrete {
     text-align: center;
-    color: #999;
+    color: #9297A5;
+    font-family: 'Inter', sans-serif;
 }
 
 .fechar-popup i {
@@ -208,4 +209,28 @@ input {
     background-color: #252E48 !important;
     color: #fff;
     font-size: 1em;
+}
+/* IMAGE KEYS  */
+.image-keys{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+.image-keys a {
+      color: #252E48;
+      margin: 10px; /* Adiciona margem ao redor de cada link */
+      text-decoration: none; /* Remove a decoração padrão do link */
+      margin: 0;
+      font-weight: 600;
+}
+.image-keys img {
+      display: block;
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      border: 2px solid #BDC0C8;
+      margin-bottom: 2px;
+      
 }
