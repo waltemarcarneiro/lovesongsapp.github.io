@@ -128,44 +128,105 @@
             <div class="close-icon" onclick="toggleProfile()">
                 <i class="fas fa-times"></i>
             </div>
-            <img src="foto.jpg" alt="Waltemar" width="100" height="100">
-            <p class="name">Waltemar Carneiro</p>
-            <div class="status">
-                <p>Web Developer</p>
-                <p>92 99362-3739</p>
-            </div>
+            <img class="foto" src="foto.jpg" alt="Waltemar" width="100" height="100">
+            <div class="name">Waltemar Carneiro</div>
+            <div class="status">Web Developer</div>
 
 <!-- SOCIAL VS DONATE-->           
             <div class="social">
-              <a href="https://instagram.com/waltemarcarneiro"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://youtube.com/@waltemarcarneiro"><i class="fa-brands fa-youtube"></i>
+              
               <a href="https://api.whatsapp.com/send?phone=5592993623739&text=Ol%C3%A1+estou+vindo+do+App+Love+Songs+%F0%9F%98%89"><i class="fa-brands fa-whatsapp"></i></a>
+
               <a href="tel:92993623739"><i class="fa-solid fa-phone"></i></a>
-              <a href="#"><i class="fa-solid fa-hand-holding-dollar"></i></a>
+
+              <a href="#" id="pixLink"><i class="fa-solid fa-hand-holding-dollar"></i></a>
             </div>
 
 <!-- SALMO 91 -->           
         <div class="mensagem">
                 <marquee scrollamount="1" bgcolor="" direction="up" height="130px" width="100%" hspace="" vspace="" behavior="" loop="" scrolldelay="100">Aquele que habita no esconderijo do Altíssimo, à sombra do Onipotente descansará. Direi do SENHOR: Ele é o meu Deus, o meu refúgio, a minha fortaleza, e nele confiarei. Porque ele te livrará do laço do passarinheiro e da peste perniciosa. Ele te cobrirá com as suas penas, e debaixo das suas asas estarás seguro; a sua verdade é escudo e broquel. Não temerás espanto noturno, nem seta que voe de dia, nem peste que ande na escuridão, nem mortandade que assole ao meio-dia. Mil cairão ao teu lado, e dez mil, à tua direita, mas tu não serás atingido. Somente com os teus olhos olharás e verás a recompensa dos ímpios. Porque tu, ó SENHOR, és o meu refúgio! O Altíssimo é a tua habitação.</marquee>
-
-            </div>
-
-
         </div>
 
+<!--START DONATE-->
+
+    <!-- POPUP DOAÇÃO -->
+
+        <div class="popup" id="popup">
+          <link rel="stylesheet" href="donate.css">
+            <div class="popup-content">
+                <div>
+                  <!-- START HEADER POPUP-->
+                    <div class="header-popup">
+
+                    <div><img src="https://lovesongsplayer.github.io/icons/icon192.png" height="50" width="50"></div>
+                    
+                    <div>
+                    <h1><i class="fa-regular fa-heart"></i>
+                        LOVE SONGS PLAYER
+                    </h1>
+                    </div>
+
+                </div><!--END HEADER POPUP-->
+
+
+
+
+                <div class="header-popup-dica">    
+                    <p>
+                        <strong style="font-size: 12px; font-weight:500;">5.0</strong>
+                        <img src="https://play-lh.googleusercontent.com/_KiRouu_G6J_2jwePzQ_i5_FMc_SVKT3mI7d7KKq9zca-Nr8bj2bPasawLvk6ajzASQS-90a8hYXeAh0lQ=w48-h16-rw" height="12">
+                        Aponte a câmera do seu celular para o QRCode, ou use os botões "<b>Copiar Chave</b>
+                        " ou "<b>Copia e Cola.</b>
+                        "
+                  </p>
+                </div> 
+                    <div class="lembrete">
+                        <strong>Sua doação é voluntária.</strong>
+                      </div>
+
+                    <div align="center" class="qrcode">
+                        <img src="qrcode-bradesco.png" height="100" alt="qrcode">
+                    </div>
+                    <div class="btn">
+                        <button class="key1" onclick="copyText('pix')">COPIAR CHAVE</button>
+                        <button class="key2" onclick="copyText('code')">COPIA e COLA</button>
+                    </div>
+                
+                </div>
+
+                <div class="fechar-popup">
+
+                  <a href="#" onclick="closePopup()"><i class="fa fa-times-circle"></i></a>
+
+              </div>
+              <span id="pix" class="chave">edcebd46-2b0e-4822-9eda-538c32196c56</span>
+                <span id="code" class="chave">00020126580014BR.GOV.BCB.PIX0136edcebd46-2b0e-4822-9eda-538c32196c565204000053039865802BR5922WALTEMAR LIMA CARNEIRO6006MANAUS62070503***63049FDD</span>
+            </div>
+        </div>
+
+<!--END DONATE-->
+
+        </div><!-- end profile-->
 
 
 
 
 
-    </div>
+
+    </div><!-- end container -->
 
     <script>
         function toggleProfile() {
             document.querySelector('.profile').classList.toggle('active');
         }
     </script>
-    <!-- profile end -->
+   
+
+  <!--SCRIPT DONATE-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="donate.js"></script>
+  
+  <!-- OTHERS SCRIPT -->
 
   <script src="js/music-list.js"></script>
   <script src="js/script.js"></script>
