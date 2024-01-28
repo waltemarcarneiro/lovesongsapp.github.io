@@ -27,6 +27,9 @@ a{
     border-top-right-radius: 15px;
     animation: slideUp 0.5s ease-out forwards;
 }
+.logo-popup{
+    border-radius: 10px;
+}
 .header-popup{
 	display: flex;
 	align-items: center;
