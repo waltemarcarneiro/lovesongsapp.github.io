@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,10 +10,10 @@
   <meta name="description" content="🎵 As mais românticas canções internacionais." />
   <meta name="theme-color" content="#0C071A" />
   <link rel="manifest" href="manifest.json" />
-  
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="profile.css">
-  
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script src="https://kit.fontawesome.com/a7bac8094a.js" crossorigin="anonymous"></script>
 
@@ -28,7 +29,7 @@
   <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#0C071A" />
 
   <meta name="msapplication-TileColor" content="#0C071A" />
-    
+
   <!-- SEO | OG -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="keywords" content="waltemar carneiro, love songs, musicas romanticas." />
@@ -41,6 +42,7 @@
 
 
 </head>
+
 <body>
 
   <div class="wrapper">
@@ -48,24 +50,24 @@
     <div class="top-bar">
       <button onclick="toggleProfile()"><i class="material-icons">menu</i></button>
       <span class="title-player">Love Songs Player</span>
-      
+
       <audio id="main-audio" src=""></audio>
       <button id="shareButton"><i class="material-icons">lyrics</i></button>
     </div>
 
-      <div class="img-area">
-        <img src="" alt="Capa">
-      </div>
-        
+    <div class="img-area">
+      <img src="" alt="Capa">
+    </div>
+
     <div class="song-details">
 
       <p class="name"></p>
       <p class="artist"></p>
 
-    <div class="volume">
-      <button id="volumeMuteButton"><i class="material-icons">volume_up</i></button>
-      <input id="volumeSlider" type="range" min="0" max="1" step="0.01" value="0.5">
-    </div>
+      <div class="volume">
+        <button id="volumeMuteButton"><i class="material-icons">volume_up</i></button>
+        <input id="volumeSlider" type="range" min="0" max="1" step="0.01" value="0.5">
+      </div>
 
     </div>
 
@@ -73,13 +75,13 @@
 
       <div class="progress-bar">
 
-      <audio id="main-audio" src=""></audio>
+        <audio id="main-audio" src=""></audio>
       </div>
       <div align="center">
-      <div class="song-timer" align="center">
-        <span class="current-time">0:00</span>
-        <span class="max-duration">0:00</span>
-      </div>
+        <div class="song-timer" align="center">
+          <span class="current-time">0:00</span>
+          <span class="max-duration">0:00</span>
+        </div>
       </div>
     </div>
 
@@ -92,26 +94,26 @@
       <i id="next" class="material-icons" title="Proxima">skip_next</i>
       <i id="more-music" class="material-icons" title="Playlist">queue_music</i>
     </div>
-    
-              <!-- MUSIC LIST -->
-       
 
-            <div class="music-list">
-                    <div class="header">
-                      <div class="row">
-                        <i class= "list material-icons">queue_music</i>
-                        <span>Playlist</span>
-                      </div>
-                      <i id="close" class="material-icons">close</i>
-                    </div>
+    <!-- MUSIC LIST -->
 
-                <ul>
-                  <!-- here li list are coming from js -->
-                </ul>
-            </div>
 
-                
-              <!-- END MUSIC LIST -->
+    <div class="music-list">
+      <div class="header">
+        <div class="row">
+          <i class="list material-icons">queue_music</i>
+          <span>Playlist</span>
+        </div>
+        <i id="close" class="material-icons">close</i>
+      </div>
+
+      <ul>
+        <!-- here li list are coming from js -->
+      </ul>
+    </div>
+
+
+    <!-- END MUSIC LIST -->
 
 
     <!--copyright-->
@@ -121,107 +123,121 @@
 
   </div><!--end wrapper-->
 
-<!-- PROFILE -->
-    <div class="container">
-        
-        <div class="profile">
-            <div class="close-icon" onclick="toggleProfile()">
-                <i class="fas fa-times"></i>
-            </div>
-            <img class="foto" src="foto.jpg" alt="Waltemar" width="100" height="100">
-            <div class="name">Waltemar Carneiro</div>
-            <div class="status">Web Developer</div>
+  <!-- PROFILE -->
+  <div class="container">
 
-<!-- SOCIAL VS DONATE-->           
-            <div class="social">
-              
-              <a href="https://api.whatsapp.com/send?phone=5592993623739&text=Ol%C3%A1+estou+vindo+do+App+Love+Songs+%F0%9F%98%89"><i class="fa-brands fa-whatsapp"></i></a>
+    <div class="profile">
+      <div class="close-icon" onclick="toggleProfile()">
+        <i class="fas fa-times"></i>
+      </div>
+      <img class="foto" src="foto.jpg" alt="Waltemar" width="100" height="100">
+      <div class="name">Waltemar Carneiro</div>
+      <div class="status">Web Developer</div>
 
-              <a href="tel:092993623739"><i class="fa-solid fa-phone"></i></a>
+      <!-- SOCIAL VS DONATE-->
+      <div class="social">
 
-              <a href="#" id="pixLink"><i class="fa-solid fa-hand-holding-dollar"></i></a>
-            </div>
+        <a
+          href="https://api.whatsapp.com/send?phone=5592993623739&text=Ol%C3%A1+estou+vindo+do+App+Love+Songs+%F0%9F%98%89"><i
+            class="fa-brands fa-whatsapp"></i></a>
 
-<!-- SALMO 91 -->           
-        <div class="mensagem">
-                <marquee scrollamount="1" bgcolor="" direction="up" height="130px" width="100%" hspace="" vspace="" behavior="" loop="" scrolldelay="100">Aquele que habita no esconderijo do Altíssimo, à sombra do Onipotente descansará. Direi do SENHOR: Ele é o meu Deus, o meu refúgio, a minha fortaleza, e nele confiarei. Porque ele te livrará do laço do passarinheiro e da peste perniciosa. Ele te cobrirá com as suas penas, e debaixo das suas asas estarás seguro; a sua verdade é escudo e broquel. Não temerás espanto noturno, nem seta que voe de dia, nem peste que ande na escuridão, nem mortandade que assole ao meio-dia. Mil cairão ao teu lado, e dez mil, à tua direita, mas tu não serás atingido. Somente com os teus olhos olharás e verás a recompensa dos ímpios. Porque tu, ó SENHOR, és o meu refúgio! O Altíssimo é a tua habitação.</marquee>
-        </div>
+        <a href="tel:092993623739"><i class="fa-solid fa-phone"></i></a>
 
-<!--START DONATE-->
+        <a href="#" id="pixLink"><i class="fa-solid fa-hand-holding-dollar"></i></a>
+      </div>
 
-    <!-- POPUP DOAÇÃO -->
+      <!-- SALMO 91 -->
+      <div class="mensagem">
+        <marquee scrollamount="1" bgcolor="" direction="up" height="130px" width="100%" hspace="" vspace="" behavior=""
+          loop="" scrolldelay="100">Aquele que habita no esconderijo do Altíssimo, à sombra do Onipotente descansará.
+          Direi do SENHOR: Ele é o meu Deus, o meu refúgio, a minha fortaleza, e nele confiarei. Porque ele te livrará
+          do laço do passarinheiro e da peste perniciosa. Ele te cobrirá com as suas penas, e debaixo das suas asas
+          estarás seguro; a sua verdade é escudo e broquel. Não temerás espanto noturno, nem seta que voe de dia, nem
+          peste que ande na escuridão, nem mortandade que assole ao meio-dia. Mil cairão ao teu lado, e dez mil, à tua
+          direita, mas tu não serás atingido. Somente com os teus olhos olharás e verás a recompensa dos ímpios. Porque
+          tu, ó SENHOR, és o meu refúgio! O Altíssimo é a tua habitação.</marquee>
+      </div>
 
-        <div class="popup" id="popup">
-          <link rel="stylesheet" href="donate.css">
-            <div class="popup-content">
-                <div>
-                  <!-- START HEADER POPUP-->
-                    <div class="header-popup">
+      <!--START DONATE-->
 
-                    <div><img class="logo-popup" src="https://lovesongsplayer.github.io/icons/icon192.png" height="50" width="50"></div>
-                    
-                    <div>
-                    <h1><i class="fa-regular fa-heart"></i>
-                        LOVE SONGS PLAYER
-                    </h1>
-                    </div>
+      <!-- POPUP DOAÇÃO -->
 
-                </div><!--END HEADER POPUP-->
+      <div class="popup" id="popup">
+        <link rel="stylesheet" href="donate.css">
+        <div class="popup-content">
+          <div>
+            <!-- START HEADER POPUP-->
+            <div class="header-popup">
 
+              <div><img class="logo-popup" src="https://lovesongsplayer.github.io/icons/icon192.png" height="50"
+                  width="50"></div>
 
-
-
-                <div class="header-popup-dica">    
-                        <strong style="font-size: 12px; font-weight:500;">5.0</strong>
-                        <img src="https://play-lh.googleusercontent.com/_KiRouu_G6J_2jwePzQ_i5_FMc_SVKT3mI7d7KKq9zca-Nr8bj2bPasawLvk6ajzASQS-90a8hYXeAh0lQ=w48-h16-rw" height="12">
-                        Aponte a câmera do seu celular para o QRCode, ou use os botões!
-                </div> 
-                    <div class="lembrete">
-                        <strong>Sua doação é voluntária.</strong>
-                      </div>
-
-                    <div align="center" class="qrcode">
-                        <img src="qrcode-bradesco.png" height="100" alt="qrcode">
-                    </div>
-                    <div class="btn">
-                        <button class="key1" onclick="copyText('pix')">COPIAR CHAVE</button>
-                        <button class="key2" onclick="copyText('code')">COPIA e COLA</button>
-                    </div>
-                
-                </div>
-
-                <div class="fechar-popup">
-
-                  <a href="#" onclick="closePopup()"><i class="fa fa-times-circle"></i></a>
-
+              <div>
+                <h1><i class="fa-regular fa-heart"></i>
+                  LOVE SONGS PLAYER
+                </h1>
               </div>
-              <span id="pix" class="chave">edcebd46-2b0e-4822-9eda-538c32196c56</span>
-                <span id="code" class="chave">00020126580014BR.GOV.BCB.PIX0136edcebd46-2b0e-4822-9eda-538c32196c565204000053039865802BR5922WALTEMAR LIMA CARNEIRO6006MANAUS62070503***63049FDD</span>
+
+            </div><!--END HEADER POPUP-->
+
+
+
+
+            <div class="header-popup-dica">
+              <strong style="font-size: 12px; font-weight:500;">5.0</strong>
+              <img
+                src="https://play-lh.googleusercontent.com/_KiRouu_G6J_2jwePzQ_i5_FMc_SVKT3mI7d7KKq9zca-Nr8bj2bPasawLvk6ajzASQS-90a8hYXeAh0lQ=w48-h16-rw"
+                height="12">
+              Aponte a câmera do seu celular para o QRCode, ou use os botões!
             </div>
+            <div class="lembrete">
+              <strong>Sua doação é voluntária.</strong>
+            </div>
+
+            <div align="center" class="qrcode">
+              <img src="qrcode-bradesco.png" height="100" alt="qrcode">
+            </div>
+            <div class="btn">
+              <button class="key1" onclick="copyText('pix')">COPIAR CHAVE</button>
+              <button class="key2" onclick="copyText('code')">COPIA e COLA</button>
+            </div>
+
+          </div>
+
+          <div class="fechar-popup">
+
+            <a href="#" onclick="closePopup()"><i class="fa fa-times-circle"></i></a>
+
+          </div>
+          <span id="pix" class="chave">edcebd46-2b0e-4822-9eda-538c32196c56</span>
+          <span id="code"
+            class="chave">00020126580014BR.GOV.BCB.PIX0136edcebd46-2b0e-4822-9eda-538c32196c565204000053039865802BR5922WALTEMAR
+            LIMA CARNEIRO6006MANAUS62070503***63049FDD</span>
         </div>
+      </div>
 
-<!--END DONATE-->
+      <!--END DONATE-->
 
-        </div><!-- end profile-->
-
-
-
+    </div><!-- end profile-->
 
 
 
-    </div><!-- end container -->
 
-    <script>
-        function toggleProfile() {
-            document.querySelector('.profile').classList.toggle('active');
-        }
-    </script>
-   
+
+
+  </div><!-- end container -->
+
+  <script>
+    function toggleProfile() {
+      document.querySelector('.profile').classList.toggle('active');
+    }
+  </script>
+
 
   <!--SCRIPT DONATE-->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-<script src="donate.js"></script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="donate.js"></script>
+
   <!-- OTHERS SCRIPT -->
 
   <script src="js/music-list.js"></script>
@@ -235,4 +251,5 @@
 
 
 </body>
+
 </html>
