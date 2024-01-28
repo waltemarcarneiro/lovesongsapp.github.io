@@ -207,17 +207,19 @@ updatePlaylistTime();
 
 //SHARE AND BACKBUTTON CONFIG
 
+/*
 document.getElementById('backButton').addEventListener('click', () => {
 // Volta para a página anterior
 history.back();
 });
-// Adicione o evento de clique ao ícone de compartilhamento
+*/
+
 document.getElementById('shareButton').addEventListener('click', () => {
 // Compartilha a página atual
 if (navigator.share) {
        navigator.share({
        title: document.title,
-       text: 'Playlist com as mais belas músicas românticas internacionais.',
+       text: 'Descubra o amor nas melodias atemporais do nosso aplicativo de música romântica, onde as décadas de 80 e 90 se encontram. Deixe-se envolver por uma trilha sonora nostálgica que celebra o romance em cada nota. 💖🎶.',
        url: 'https://bit.ly/LoveSongsApp'
        }).then(() => {
        console.log('Página compartilhada com sucesso!');
