@@ -139,7 +139,7 @@ body {
 
 .song-details {
     text-align: center;
-    top: 60%;
+    top: 55%;
     left: 20px;
     right: 20px;
     position: fixed;
@@ -148,9 +148,8 @@ body {
 .song-details .name {
     font-size: 1.3em;
     font-weight: 600;
-    color: white;
+    color: #fff;
     font-family: 'Montserrat', sans-serif;
-
 }
 
 .song-details .artist {
@@ -159,7 +158,6 @@ body {
     color: #2ab2af;
     opacity: 0.8;
     font-family: 'Montserrat', sans-serif;
-
 }
 
 .progress-area {
@@ -177,9 +175,9 @@ body {
     border-radius: 50px;
     background: #17213f;
     cursor: pointer;
-    top: 79%;
-}
+    top: 75%;
 
+}
 
 .progress-area .progress-bar {
     height: inherit;
@@ -217,7 +215,10 @@ body {
     right: 20px;
     max-width: 440px;
     margin: 0px auto;
-    top: 80%;
+    top: 76%;
+}
+
+.progress-area .song-timer {
 }
 
 .song-timer span {
@@ -410,7 +411,7 @@ button {
     right: 20px;
     margin: 0px auto;
     max-width: 440px;
-    top: 73%;
+    top: 70%;
     justify-content: space-between;
 }
 
