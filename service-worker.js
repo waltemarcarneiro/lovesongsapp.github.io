@@ -88,19 +88,20 @@ self.addEventListener('periodicsync', event => {
     );
   }
 });
-//Adicionando um Push Listener ao nosso Service Worker
+
+// Adicionando um Push Listener ao nosso Service Worker
 self.addEventListener('push', (event) => {
   event.waitUntil(
     self.registration.showNotification('Notification Title', {
       body: 'Notification Body Text',
       icon: 'custom-notification-icon.png',
-    });
+    })
   );
 });
-//Tratamento de cliques de notificação
-self.addEventListener('notificationclick', (event) => {
-    event.notification.close(); 
-    var fullPath = self.location.origin + event.notification.data.path; 
-    clients.openWindow(fullPath); 
-});
 
+// Tratamento de cliques de notificação
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close(); 
+  var fullPath = self.location.origin + event.notification.data.path; 
+  clients.openWindow(fullPath); 
+});
