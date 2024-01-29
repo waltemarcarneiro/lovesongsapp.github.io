@@ -9,10 +9,16 @@ self.addEventListener("install", function (event) {
   console.log("Install Event processing");
 
   event.waitUntil(
-    caches.open(CACHE_NAME).then(function (cache) {
+    (async () => {
+      const cache = await caches.open(CACHE_NAME);
       console.log("Cached offline page during install");
-      return cache.addAll(urlsToCache);
-    })
+
+      try {
+        await cache.addAll(urlsToCache);
+      } catch (error) {
+        console.error("Cache addAll error:", error);
+      }
+    })()
   );
 });
 
@@ -20,41 +26,38 @@ self.addEventListener("fetch", function (event) {
   if (event.request.method !== "GET") return;
 
   event.respondWith(
-    fetch(event.request)
-      .then(function (response) {
-        console.log("add page to offline cache: " + response.url);
+    (async () => {
+      try {
+        const response = await fetch(event.request);
+
+        console.log("Adding page to offline cache: " + response.url);
 
         // If request was successful, add or update it in the cache
-        return caches.open(CACHE_NAME).then(function (cache) {
-          cache.put(event.request, response.clone());
-          return response;
-        });
-      })
-      .catch(function (error) {
-        console.log("Network request Failed. Serving content from cache: " + error);
+        const cache = await caches.open(CACHE_NAME);
+        cache.put(event.request, response.clone());
+
+        return response;
+      } catch (error) {
+        console.error("Network request failed. Serving content from cache:", error);
         return fromCache(event.request);
-      })
+      }
+    })()
   );
 });
 
 // Check to make sure Sync is supported.
 if ('serviceWorker' in navigator && 'SyncManager' in window) {
-
   // Get our service worker registration.
-  const registration = await navigator.serviceWorker.registration;
-
-  try {
-    // This is where we request our sync. 
-    // We give it a "tag" to allow for differing sync behavior.
-    await registration.sync.register('database-sync');
-
-  } catch {
-    console.log("Background Sync failed.")
-  }
+  navigator.serviceWorker.ready.then(async (registration) => {
+    try {
+      // This is where we request our sync. 
+      // We give it a "tag" to allow for differing sync behavior.
+      await registration.sync.register('database-sync');
+    } catch {
+      console.error("Background Sync failed.");
+    }
+  });
 }
-
-
-
 
 function fromCache(request) {
   return caches.open(CACHE_NAME).then(function (cache) {
