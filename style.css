@@ -80,7 +80,18 @@ body {
 .wrapper i {
     cursor: pointer;
 }
-
+.header{
+    position: fixed;
+    max-width: 480px;
+    position: fixed;
+    background: #000;
+    color: red;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
 .top-bar,
 .progress-area,
 .controls,
@@ -325,6 +336,7 @@ body {
     opacity: 1;
     pointer-events: auto;
     overflow-y: auto;
+    top:20px;
 }
 
 .header .row {
@@ -336,10 +348,13 @@ body {
 
 .header .row i {
     cursor: default;
+    color: #00ef89;
+    margin-left: 10px;
 }
 
 .header .row span {
     margin-left: 5px;
+    color: #00ef89;
 }
 
 .header #close {
@@ -350,9 +365,9 @@ body {
 
 .header #close {
     padding: 5px;
-    background: #000;
     border-radius: 5px;
-    border: 1px solid #492791 !important;
+    color: #00ef89;
+    margin-right: 15px;
 }
 
 .music-list ul {
