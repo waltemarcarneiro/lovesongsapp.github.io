@@ -53,80 +53,38 @@ if ('serviceWorker' in navigator && 'SyncManager' in window) {
       // This is where we request our sync. 
       // We give it a "tag" to allow for differing sync behavior.
       await registration.sync.register('database-sync');
-    } catch {
-      console.error("Background Sync failed.");
+
+      // Register periodic sync
+      await registration.periodicSync.register('fetch-new-content', {
+        minInterval: 24 * 60 * 60 * 1000, // Set the sync to happen no more than once a day.
+      });
+
+    } catch (error) {
+      console.error("Sync or Periodic Sync registration failed:", error);
     }
   });
 }
 
-function fromCache(request) {
-  return caches.open(CACHE_NAME).then(function (cache) {
-    return cache.match(request).then(function (matching) {
-      if (!matching || matching.status === 404) {
-        if (request.destination !== "document" || request.mode !== "navigate") {
-          return caches.match('/offline.html');
-        }
-
-        return caches.match('/offline.html');
-      }
-
-      return matching;
-    });
-  });
-}
-// Check to make sure Sync is supported.
-if ('serviceWorker' in navigator && 'SyncManager' in window) {
-
-  // Get our service worker registration.
-  const registration = await navigator.serviceWorker.registration;
-
-  try {
-    // This is where we request our sync. 
-    // We give it a "tag" to allow for differing sync behavior.
-    await registration.sync.register('database-sync');
-
-  } catch {
-    console.log("Background Sync failed.")
-  }
-}
 // Add an event listener for the `sync` event in your service worker.
 self.addEventListener('sync', event => {
-
   // Check for correct tag on the sync event.
   if (event.tag === 'database-sync') {
-
     // Execute the desired behavior with waitUntil().
     event.waitUntil(
-
       // This is just a hypothetical function for the behavior we desire.
-      pushLocalDataToDatabase();
+      pushLocalDataToDatabase()
     );
-    }
+  }
 });
-// Query the user for permission.
-const periodicSyncPermission = await navigator.permissions.query({
-  name: 'periodic-background-sync',
-});
-// Check if permission was properly granted.
-if (periodicSyncPermission.state == 'granted') {
 
-  // Register a new periodic sync.
-  await registration.periodicSync.register('fetch-new-content', {
-    // Set the sync to happen no more than once a day.
-    minInterval: 24 * 60 * 60 * 1000
-  });
-} 
 // Listen for the `periodicsync` event.
 self.addEventListener('periodicsync', event => {
-
   // Check for correct tag on the periodicSyncPermissionsync event.
   if (event.tag === 'fetch-new-content') {
-
     // Execute the desired behavior with waitUntil().
     event.waitUntil(
-
       // This is just a hypothetical function for the behavior we desire.
-      fetchNewContent();
+      fetchNewContent()
     );
   }
 });
