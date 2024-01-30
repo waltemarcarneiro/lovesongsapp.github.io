@@ -136,6 +136,6 @@ let allMusic = [
     name: "Truly Madly Deeply",
     artist: "Savage Garden",
     img: "./covers/savage-garden.jpg",
-    src: "https://archive.org/download/Trullymadlydeedly-savageGarden/05-trullymadlydeedly-savageGarden.mp3"
+    src: "https://archive.org/download/Trullymadlydeedly-savageGarden/05-trullymadlydeedly-savageGarden..mp3"
   },
 ];
