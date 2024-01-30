@@ -132,7 +132,10 @@ body {
     margin-left: -3px;
     color: var(--lightblack);
     font-family: 'Montserrat', sans-serif;
-    opacity: 0.3;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+    background-image: linear-gradient(181deg, #2dfff9, #2dc5ff, #9300ff);
 }
 
 .img-area {
