@@ -5,24 +5,24 @@ const urlsToCache = [
   '/offline.html',
 ];
 
-self.addEventListener("install", function (event) {
+self.addEventListener("install", (event) => {
   console.log("Install Event processing");
 
   event.waitUntil(
     (async () => {
       const cache = await caches.open(CACHE_NAME);
-      console.log("Cached offline page during install");
 
       try {
         await cache.addAll(urlsToCache);
+        console.log("Cached offline page during install");
       } catch (error) {
-        console.error("Cache addAll error:", error);
+        console.error("Cache addAll error during installation:", error);
       }
     })()
   );
 });
 
-self.addEventListener("fetch", function (event) {
+self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
 
   event.respondWith(
@@ -30,11 +30,10 @@ self.addEventListener("fetch", function (event) {
       try {
         const response = await fetch(event.request);
 
-        console.log("Adding page to offline cache: " + response.url);
-
-        // If request was successful, add or update it in the cache
         const cache = await caches.open(CACHE_NAME);
         cache.put(event.request, response.clone());
+
+        console.log("Adding page to offline cache: " + response.url);
 
         return response;
       } catch (error) {
@@ -45,51 +44,35 @@ self.addEventListener("fetch", function (event) {
   );
 });
 
-// Check to make sure Sync is supported.
 if ('serviceWorker' in navigator && 'SyncManager' in window) {
-  // Get our service worker registration.
   navigator.serviceWorker.ready.then(async (registration) => {
     try {
-      // This is where we request our sync. 
-      // We give it a "tag" to allow for differing sync behavior.
       await registration.sync.register('database-sync');
-
-      // Register periodic sync
       await registration.periodicSync.register('fetch-new-content', {
-        minInterval: 24 * 60 * 60 * 1000, // Set the sync to happen no more than once a day.
+        minInterval: 24 * 60 * 60 * 1000,
       });
-
     } catch (error) {
       console.error("Sync or Periodic Sync registration failed:", error);
     }
   });
 }
 
-// Add an event listener for the `sync` event in your service worker.
-self.addEventListener('sync', event => {
-  // Check for correct tag on the sync event.
+self.addEventListener('sync', (event) => {
   if (event.tag === 'database-sync') {
-    // Execute the desired behavior with waitUntil().
     event.waitUntil(
-      // This is just a hypothetical function for the behavior we desire.
-      pushLocalDataToDatabase()
+      pushLocalDataToDatabase && pushLocalDataToDatabase()
     );
   }
 });
 
-// Listen for the `periodicsync` event.
-self.addEventListener('periodicsync', event => {
-  // Check for correct tag on the periodicSyncPermissionsync event.
+self.addEventListener('periodicsync', (event) => {
   if (event.tag === 'fetch-new-content') {
-    // Execute the desired behavior with waitUntil().
     event.waitUntil(
-      // This is just a hypothetical function for the behavior we desire.
-      fetchNewContent()
+      fetchNewContent && fetchNewContent()
     );
   }
 });
 
-// Adicionando um Push Listener ao nosso Service Worker
 self.addEventListener('push', (event) => {
   event.waitUntil(
     self.registration.showNotification('Notification Title', {
@@ -99,9 +82,22 @@ self.addEventListener('push', (event) => {
   );
 });
 
-// Tratamento de cliques de notificação
 self.addEventListener('notificationclick', (event) => {
-  event.notification.close(); 
-  var fullPath = self.location.origin + event.notification.data.path; 
-  clients.openWindow(fullPath); 
+  event.notification.close();
+  const fullPath = self.location.origin + event.notification.data.path;
+  clients.openWindow(fullPath);
 });
+
+function fromCache(request) {
+  return caches.open(CACHE_NAME).then((cache) => {
+    return cache.match(request).then((matching) => {
+      if (!matching || matching.status === 404) {
+        if (request.destination !== "document" || request.mode !== "navigate") {
+          return caches.match('/offline.html');
+        }
+        return caches.match('/offline.html');
+      }
+      return matching;
+    });
+  });
+}
