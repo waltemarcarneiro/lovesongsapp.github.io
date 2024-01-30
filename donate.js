@@ -1,8 +1,19 @@
-document.getElementById('pixLink').addEventListener('click', function () {
-
-    document.getElementById('popup').style.display = 'block';
+/// Evento para abrir o popup quando o link 'pixLink' é clicado
+document.getElementById('pixLink').addEventListener('click', function (event) {
+    event.stopPropagation(); // Impede a propagação do clique para o documento
+    openPopup();
 });
 
+// Função para abrir o popup
+function openPopup() {
+    var popup = document.getElementById('popup');
+    popup.style.display = 'block';
+
+    // Adiciona um evento de clique fora do popup para fechá-lo
+    document.addEventListener('click', clickOutsidePopupHandler);
+}
+//FECHAR POPUP
+// Função para fechar o popup
 function closePopup() {
     var popup = document.getElementById('popup');
     popup.style.animation = 'slideDown 0.5s ease-out forwards';
@@ -12,7 +23,22 @@ function closePopup() {
         popup.style.animation = '';
     }, 500);
     // Aguarde o término da animação antes de ocultar o popup
+
+    // Remove o evento de clique fora do popup ao fechar
+    document.removeEventListener('click', clickOutsidePopupHandler);
 }
+
+// Função para lidar com o clique fora do popup
+function clickOutsidePopupHandler(event) {
+    var popup = document.getElementById('popup');
+    var pixLink = document.getElementById('pixLink');
+
+    if (event.target !== popup && !popup.contains(event.target) && event.target !== pixLink) {
+        closePopup();
+    }
+}
+
+//COPIA O TEXTO
 
 function copyText(elementId) {
     var textToCopy = document.getElementById(elementId).innerText;
