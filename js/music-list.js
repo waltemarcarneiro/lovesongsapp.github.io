@@ -132,4 +132,10 @@ let allMusic = [
     img: "./covers/bryan-adams.jpg",
     src: "https://archive.org/download/bryanadamspleaseforgiveme_201908/Bryan%20Adams%20-%20Heaven%20%28Official%20Music%20Video%29.mp3"
   },
+  {
+    name: "Truly Madly Deeply",
+    artist: "Savage Garden",
+    img: "./covers/savage-garden.jpg",
+    src: "https://archive.org/download/Trullymadlydeedly-savageGarden/05-trullymadlydeedly-savageGarden.mp3"
+  },
 ];
