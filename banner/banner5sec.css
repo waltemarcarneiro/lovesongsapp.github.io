@@ -7,7 +7,7 @@ body{
 }
 .banner{
 
-	max-width: 90%;
+	max-width: 440px;
 	background: #080A18;
 	position: fixed;
 	bottom: 0;
@@ -15,12 +15,12 @@ body{
 	border: none;
 	border-radius: 10px;
 	display: none;
-	
+	margin-left: 20px;
+	margin-right: 20px;
 }
 .header-banner{
 	color: #080a18;
 	font-weight: 600;
-	/*text-shadow: rgb(179, 244, 249) 0px 1px 0px;*/
 	background: #00FFBF;
 	padding: 5px;
 	display: flex;
@@ -42,7 +42,7 @@ body{
 	background: #080A18;
 	color: #fff;
 	
-	font-size: 1.2em;
+	font-size: 1.1em;
 	font-weight: 300;
 	letter-spacing: 1px;
 	display: flex;
