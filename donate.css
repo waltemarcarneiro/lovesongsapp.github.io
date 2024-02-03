@@ -11,16 +11,47 @@
 a {
     text-decoration: none;
 }
+.sticky{
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    max-width: 100%;
+    padding: 5px 20px;
+    background: #fff;
+    color: #050505;
+    font-weight: bold;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    top: 0px;
+    margin: 0 auto;
+    overflow: hidden !important;
+    cursor: pointer;
+}
+#salmo{
+    color: #757575;
+    text-align: justify;
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin-top: 20px;
+    
+}
 .popup {
     display: none;
-    position: fixed;
+    position: absolute;
+    overflow: auto; /*rolar*/
+    max-height: 80%; /*set altura*/
+    z-index: 2;
     bottom: 0;
     left: 0;
-    width: 100%;
-    background-color: #fff;
-    border-top: 1px solid #cfe1fd;
-    overflow: hidden;
+    max-width: 480px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid #eee;
     z-index: 2;
     -webkit-border-top-left-radius: 15px;
     -webkit-border-top-right-radius: 15px;
