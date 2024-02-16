@@ -138,4 +138,10 @@ let allMusic = [
     img: "./covers/savage-garden.jpg",
     src: "https://archive.org/download/Trullymadlydeedly-savageGarden/05-trullymadlydeedly-savageGarden..mp3"
   },
+  {
+    name: "A Matter of Feeling",
+    artist: "a-ha",
+    img: "./covers/duranduran.jpg",
+    src: "https://archive.org/download/a-matter-of-feeling-1/A_Matter_of_Feeling~1.mp3"
+  },
 ];
