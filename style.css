@@ -1,10 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open Sans:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap'); @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); @import url('https://fonts.googleapis.com/css2?family=Open Sans:wght@400;500;600;700&display=swap'); @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap'); * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,8 +7,7 @@
     user-select: none;
 }
 
-*::before,
-*::after {
+*::before, *::after {
     padding: 0;
     margin: 0;
 }
@@ -80,7 +73,8 @@ body {
 .wrapper i {
     cursor: pointer;
 }
-.header{
+
+.header {
     position: fixed;
     max-width: 480px;
     position: fixed;
@@ -92,18 +86,14 @@ body {
     right: 0;
     margin: 0 auto;
 }
-.top-bar,
-.progress-area,
-.controls,
-.music-list .header,
-.music-list ul li {
+
+.top-bar, .progress-area, .controls, .music-list .header, .music-list ul li {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .top-bar {
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -162,15 +152,20 @@ body {
 
 .song-details {
     text-align: center;
-    top: 55%;
+    top: 60%;
     left: 20px;
     right: 20px;
     position: fixed;
+    max-width: 480px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .song-details .name {
     font-size: 1.3em;
-    font-weight: 600;
+    font-weight: 500;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
 }
@@ -199,7 +194,6 @@ body {
     background: #17213f;
     cursor: pointer;
     top: 75%;
-
 }
 
 .progress-area .progress-bar {
@@ -220,7 +214,6 @@ body {
     transform: translateY(-50%);
     background: inherit;
     transition: opacity 0.2s ease;
-
 }
 
 .progress-area:hover .progress-bar::before {
@@ -272,8 +265,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.controls i:nth-child(2),
-.controls i:nth-child(4) {
+.controls i:nth-child(2), .controls i:nth-child(4) {
     font-size: 43px;
 }
 
@@ -319,7 +311,6 @@ body {
 }
 
 .music-list {
-
     position: fixed;
     background: rgba(0, 0, 0, 0.9);
     max-width: 480px;
@@ -339,7 +330,7 @@ body {
     opacity: 1;
     pointer-events: auto;
     overflow-y: auto;
-    top:20px;
+    top: 20px;
 }
 
 .header .row {
@@ -424,7 +415,6 @@ button {
 
 .title-player {
     font-weight: 400;
-
 }
 
 .volume {
