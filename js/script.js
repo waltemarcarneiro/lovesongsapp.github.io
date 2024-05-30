@@ -220,7 +220,7 @@ if (navigator.share) {
        navigator.share({
        title: document.title,
        text: 'Descubra o amor nas melodias atemporais do nosso aplicativo de música romântica, onde as décadas de 80 e 90 se encontram. Deixe-se envolver por uma trilha sonora nostálgica que celebra o romance em cada nota. 💖🎶.',
-       url: 'https://bit.ly/LoveSongsApp'
+       url: 'https://bit.ly/lovesongsapp'
        }).then(() => {
        console.log('Página compartilhada com sucesso!');
        }).catch((error) => {
