@@ -264,7 +264,7 @@ input {
       margin: 10px; /* Adiciona margem ao redor de cada link */
       text-decoration: none; /* Remove a decoração padrão do link */
       margin: 0;
-      font-weight: 600;
+      
 }
 .image-keys img {
       display: block;
